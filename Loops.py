@@ -4,17 +4,17 @@
 
 #Example: iterating over a string:
 
-name = 'Aarti'
+name = 'Rohit'
 for i in name:
     print(i)
     if(i == "r"):
-        print("This middle word in name")
+        print("This first word in name")
 
 #Example: iterating over a list:
 
 fruits = ["apple", "banana", "cherry"]
-for x in fruits:
-    print(x)
+for i in fruits:
+    print(i)
 
 string = "hello"
 for a  in string:
