@@ -19,7 +19,7 @@ print(dic.get('eligible'))
 
 #II. Accessing multiple values:
 #The values() method will return a list of all the values in the dictionary.
-dic= {'name':'Sahil', 'age':24, 'eligible':True}
+dic= {'name':'Akash', 'age':24, 'eligible':True}
 print(dic.values())
 
 #III. Accessing keys:
@@ -74,14 +74,6 @@ info = {'name':'Karan', 'age':19, 'eligible':True, 'DOB':2003}
 del info
 #print(info)
 
-#Dictionary Methods
-ep1 = {122: 45, 123: 89, 567: 69, 670: 69}
-ep2 = {222: 67, 566: 90}
 
-# ep1.update(ep2)
-# ep1.clear()
-# ep1.pop(122)
-ep1.popitem()
-del ep1[122]
-print(ep1)
+
 
