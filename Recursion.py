@@ -63,7 +63,7 @@ def fibonacci_series(n):
     return fib_series
 
 # Example usage:
-n = 30  # Generate Fibonacci series up to 30
+n = 20  # Generate Fibonacci series up to 20
 print(fibonacci_series(n))
 
 
