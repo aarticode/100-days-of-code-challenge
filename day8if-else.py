@@ -81,8 +81,8 @@ print ("A") if a>b else print ("B")
 
 #Example
 #One line if else statement, with 3 conditions:
-a = 33000
-b = 33023
+a = 330
+b = 330
 
 print("A") if a > b else print("=") if a == b else print("B")
 c = 10 if a > b else  0
