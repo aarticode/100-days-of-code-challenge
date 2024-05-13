@@ -127,3 +127,79 @@ x = func1()
 print(x)
 
 
+#Raising Custom errors
+#In python, we can raise custom errors by using the raise keyword.
+a = int ( input ("Enter  any value   between 5 and  9"))
+
+if (a<5 or a>9):
+    raise  ValueError("Value should be between 5 and 9")
+
+#Example2
+salary = int(input("Enter salary amount: "))
+if not 2000 < salary < 5000:
+    raise ValueError("Not a valid salary")
+
+
+#Defining Custom Exceptions
+#In Python, we can define custom exceptions by creating a new class that is derived from the built-in Exception class.
+
+class CustomError(Exception):
+    """A custom exception class."""
+    def __init__(self, message="An error occurred"):
+        self.message = message
+        super().__init__(self.message)
+
+# Example usage
+def divide(x, y):
+    if y == 0:
+        raise CustomError("Division by zero is not allowed")
+    return x / y
+
+try:
+    result = divide(10, 0)
+    print("Result of division:", result)
+except CustomError as e:
+    print("Error:", e)
+
+
+
+#Example
+ #class InsufficientFundsError(Exception):
+    """Exception raised when an account has insufficient funds for a transaction."""
+
+    def __init__(self, balance, amount):
+        self.balance = balance
+        self.amount = amount
+        super().__init__(f"Insufficient funds: Balance {balance}, Attempted Transaction {amount}")
+
+
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            raise InsufficientFundsError(self.balance, amount)
+        self.balance -= amount
+        return self.balance
+
+
+# Main program
+def main():
+    initial_balance = 1000
+    account = BankAccount(initial_balance)
+
+    try:
+        print("Current balance:", account.balance)
+        withdrawal_amount = float(input("Enter withdrawal amount: "))
+        remaining_balance = account.withdraw(withdrawal_amount)
+        print("Withdrawal successful.")
+        print("Remaining balance:", remaining_balance)
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+    except InsufficientFundsError as e:
+        print("Error:", e)
+
+
+if __name__ == "__main__":
+    main()
