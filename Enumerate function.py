@@ -53,6 +53,6 @@ for index, color in enumerate(colors):
 
 #And here's an example with a string:
 # Loop over a string and print the index and value of each character
-s = 'hello'
+s = 'Python'
 for index, c in enumerate(s):
     print(index, c)
