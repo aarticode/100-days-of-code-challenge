@@ -1,3 +1,16 @@
+import time
+timestamp = time.strftime('%H: %M:%S')
+print(timestamp)
+timestamp = time.strftime('%H')
+print(timestamp)
+timestamp = time.strftime('%M')
+print(timestamp)
+timestamp = time.strftime('%S')
+print(timestamp)
+
+
+
+
 #Python program that translates a message into secret code language and can decode it based on the rules you provided.
 #The program asks whether you want to encode or decode the message:
 
