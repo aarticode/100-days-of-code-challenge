@@ -76,7 +76,7 @@ def fibonacci(n):
     return fib_series
 
 # Example usage:
-n = 30  # Generate the first 8 Fibonacci numbers
+n = 30 # Generate the first 8 Fibonacci numbers
 print(fibonacci(n))
 
 
